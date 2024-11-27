@@ -31,4 +31,5 @@ Basta executar o comando abaixo:
 ```
 npm start
 ```
-
+## Autor
+Clayton Morais de Oliveira
