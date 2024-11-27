@@ -6,7 +6,7 @@ Este projeto é uma aplicação front-end desenvolvida com React. O objetivo é 
 
 ## Pré-requisitos
 
-Para que a aplicação funcione corretamente, é necessário que tenha o node instalado e inicie a aplicação com os comandos:
+Para que a aplicação funcione corretamente, é necessário que tenha o node instalado e instale a aplicação com o comando:
 
 ```
 npm install
@@ -27,3 +27,8 @@ npm install
 
 ## Como Executar
 Basta executar o comando abaixo:
+
+```
+npm start
+```
+
