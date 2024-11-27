@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Web Medical Booking - Projeto MVP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto MVP para disciplina **Desenvolvimento Full Stack A** 
 
-## Available Scripts
+Este projeto é uma aplicação front-end desenvolvida com HTML, CSS e JavaScript puro. O objetivo é criar uma interface para gerenciar clientes, permitindo adicionar, editar, excluir e visualizar informações dos clientes.
 
-In the project directory, you can run:
+## Pré-requisitos
 
-### `npm start`
+Para que a aplicação funcione corretamente, é necessário que a [api-cliente](#) esteja em execução. A API deve estar acessível para realizar operações de CRUD (criar, ler, atualizar e excluir) sobre os dados dos clientes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Cadastro de Clientes**: Permite adicionar novos clientes com informações como nome, email, telefone, idade e endereço.
+- **Edição de Clientes**: Permite editar as informações dos clientes existentes.
+- **Exclusão de Clientes**: Permite excluir clientes do banco de dados.
+- **Visualização de Clientes**: Lista todos os clientes cadastrados com opções para editar e excluir.
 
-### `npm test`
+## Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **HTML**: Estruturação da página.
+- **CSS**: Estilização da interface utilizando Bootstrap para um layout moderno e responsivo.
+- **JavaScript**: Manipulação dinâmica da DOM e comunicação com a API via `fetch`.
 
-### `npm run build`
+## Como Executar
+Bastar digitar o caminho do arquivo html
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Autor
+Clayton Morais de Oliveira
