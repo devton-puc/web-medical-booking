@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useModal } from '../providers/ModalContext';
+import  formatDate  from '../utils/FormatDate';
 
 const Confirmation = () => {
   const location = useLocation();
@@ -17,6 +18,8 @@ const Confirmation = () => {
     navigate('/booking', { state: { patient, date, time, specialty } });
   };
 
+  const formattedDate = formatDate(date);
+
   return (
           <div className="card shadow-lg rounded-3 border-0">
               <div className="card-header bg-primary-custom text-white">
@@ -26,7 +29,7 @@ const Confirmation = () => {
                 {patient ? (
                   <div>
                     <p className='mt-2'><strong>Paciente:</strong> {patient}</p>
-                    <p className='mt-2'><strong>Data:</strong> {date}</p>
+                    <p className='mt-2'><strong>Data:</strong> {formattedDate}</p>
                     <p className='mt-2'><strong>Horário:</strong> {time}</p>
                     <p className='mt-2'><strong>Especialidade:</strong> {specialty}</p>
                   </div>
