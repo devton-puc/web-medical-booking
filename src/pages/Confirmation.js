@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useModal } from '../providers/ModalContext';
 
 const Confirmation = () => {
   const location = useLocation();
@@ -8,6 +9,8 @@ const Confirmation = () => {
 
   const handleConfirm = () => {
     navigate('/');
+    navigate('/', { state: { success: true, message: 'Agendamento criado com sucesso.' } });
+
   };
 
   const handleBookingRedirect = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ModalProvider } from './providers/ModalContext';
 import './index.css';
 import './custom.css';
 import App from './App';
@@ -10,6 +11,8 @@ import "font-awesome/css/font-awesome.min.css"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ModalProvider>
+      <App />
+    </ModalProvider>
   </React.StrictMode>
 );

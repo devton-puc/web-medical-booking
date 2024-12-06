@@ -48,80 +48,79 @@ const Booking = () => {
   };
 
   return (
-
-                <div className="card shadow-lg rounded-3 border-0">
-                  <div className="card-header bg-primary-custom text-white">
-                    <h3>Agendar Consulta</h3>
+          <div className="card shadow-lg rounded-3 border-0">
+            <div className="card-header bg-primary-custom text-white">
+              <h3>Agendar Consulta</h3>
+            </div>
+            <div className="card-body">
+              <form onSubmit={handleSubmit}>
+              <div class="row  mt-1">
+                  <div class="form-group col-md-12">
+                    <label htmlFor="patient" className="form-label">Paciente</label>
+                    <input
+                      type="text"
+                      id="patient"
+                      name="patient"
+                      className="form-control"
+                      value={formData.patient}
+                      onChange={handleChange}
+                      required
+                    />
+                   </div>
+              </div>
+              <div class="row mt-1">
+                  <div class="form-group col-md-6">
+                    <label htmlFor="date" className="form-label">Data</label>
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      className="form-control"
+                      value={formData.date}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
-                  <div className="card-body">
-                    <form onSubmit={handleSubmit}>
-                    <div class="row  mt-1">
-                        <div class="form-group col-md-12">
-                          <label htmlFor="patient" className="form-label">Paciente</label>
-                          <input
-                            type="text"
-                            id="patient"
-                            name="patient"
-                            className="form-control"
-                            value={formData.patient}
-                            onChange={handleChange}
-                            required
-                          />
-                         </div>
-                    </div>
-                    <div class="row mt-1">
-                        <div class="form-group col-md-6">
-                          <label htmlFor="date" className="form-label">Data</label>
-                          <input
-                            type="date"
-                            id="date"
-                            name="date"
-                            className="form-control"
-                            value={formData.date}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label htmlFor="time" className="form-label">Horário</label>
-                          <input
-                            type="time"
-                            id="time"
-                            name="time"
-                            className="form-control"
-                            value={formData.time}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="row  mt-1">
-                        <div class="form-group col-md-12">
-                          <label htmlFor="specialty" className="form-label">Especialidade</label>
-                          <select
-                            id="specialty"
-                            name="specialty"
-                            className="form-control"
-                            value={formData.specialty}
-                            onChange={handleChange}
-                            required
-                          >
-                          <option value="">Selecione...</option>
-                            {specialties.map(specialty => (
-                              <option key={specialty.id} value={specialty.name}>
-                                {specialty.name}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
-                      <div className="d-flex justify-content-start gap-2 mt-3">
-                        <button type="submit" className="btn btn-primary-custom">Confirmar</button>
-                        <button type="button" onClick={handleCancel} className="btn btn-secondary-custom ml-2">Cancelar</button>
-                      </div>
-                    </form>
+                  <div class="form-group col-md-6">
+                    <label htmlFor="time" className="form-label">Horário</label>
+                    <input
+                      type="time"
+                      id="time"
+                      name="time"
+                      className="form-control"
+                      value={formData.time}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
                 </div>
+                <div class="row  mt-1">
+                  <div class="form-group col-md-12">
+                    <label htmlFor="specialty" className="form-label">Especialidade</label>
+                    <select
+                      id="specialty"
+                      name="specialty"
+                      className="form-control"
+                      value={formData.specialty}
+                      onChange={handleChange}
+                      required
+                    >
+                    <option value="">Selecione...</option>
+                      {specialties.map(specialty => (
+                        <option key={specialty.id} value={specialty.name}>
+                          {specialty.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-start gap-2 mt-3">
+                  <button type="submit" className="btn btn-primary-custom">Confirmar</button>
+                  <button type="button" onClick={handleCancel} className="btn btn-secondary-custom ml-2">Cancelar</button>
+                </div>
+              </form>
+            </div>
+          </div>
     );
 };
 

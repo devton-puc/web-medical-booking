@@ -69,15 +69,15 @@ const PaginatedTable = ({ columns, data, rowsPerPage, actions, noDataMessage }) 
             </div>
           )}
 
-          {/* Layout estilo cartão para dispositivos móveis */}
           {isMobile && (
-            <div className="card-list">
+            <>
               {currentData.map((row, rowIndex) => (
-                <div className="card mb-3" key={rowIndex}>
-                  <div className="card-body">
+                <div className="card-custom" key={rowIndex}>
+                  <div className="card-custom-body">
                     {visibleColumns.map((column) => (
-                      <div key={column.key} className="mb-2">
-                        <strong>{column.label}:</strong> {row[column.key]}
+                      <div className="card-item" key={column.key}>
+                        <span class="card-label">{column.label}:</span>
+                        <span class="card-value">{row[column.key]}</span>
                       </div>
                     ))}
                     {actions.length > 0 && (
@@ -96,7 +96,7 @@ const PaginatedTable = ({ columns, data, rowsPerPage, actions, noDataMessage }) 
                   </div>
                 </div>
               ))}
-            </div>
+            </>
           )}
 
           {/* Paginação */}

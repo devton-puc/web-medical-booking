@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import PaginatedTable from "../components/PaginatedTable";
+import { useModal } from '../providers/ModalContext';
 
 const AppointmentList = () => {
+
+  const { showAlert, showConfirm } = useModal();
 
   const columns = [
     { key: "patient", label: "Paciente" },
@@ -20,9 +23,13 @@ const AppointmentList = () => {
   ]);
 
   const cancelAppointment = (row) => {
-    if (window.confirm(`Você tem certeza que deseja excluir ${row.patient}?`)) {
-        setData(data.filter((item) => item.id !== row.id));
+
+    showConfirm(`Você tem certeza que deseja cancelar o agendamento do paciente selecionado?`, (result) => {
+      if (result) {
+        showAlert('Agendamento cancelado com sucesso.', 'success');
       }
+    });
+
   };
 
   const actions = [
@@ -36,20 +43,20 @@ const AppointmentList = () => {
 
 
   return (
-    <div className="card shadow-lg rounded-3 border-0">
-      <div className="card-header bg-primary-custom text-white">
-          <h3>Agendamentos Marcados</h3>
-      </div>
-      <div className="card-body">
-        <PaginatedTable
-            columns={columns}
-            data={data}
-            rowsPerPage={3}
-            actions={actions}
-            noDataMessage="Não existe nenhum agendamento marcado."
-        />
-      </div>
-    </div>
+          <div className="card shadow-lg rounded-3 border-0">
+            <div className="card-header bg-primary-custom text-white">
+                <h3>Agendamentos Marcados</h3>
+            </div>
+            <div className="card-body">
+              <PaginatedTable
+                  columns={columns}
+                  data={data}
+                  rowsPerPage={3}
+                  actions={actions}
+                  noDataMessage="Não existe nenhum agendamento marcado."
+              />
+            </div>
+          </div>
   );
 };
 
