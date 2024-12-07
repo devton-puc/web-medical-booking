@@ -4,6 +4,15 @@ Projeto MVP para disciplina **Desenvolvimento Front End Avançado**
 
 Este projeto é uma aplicação front-end desenvolvida com React. O objetivo é criar uma interface para gerenciar agendamento de consultas, permitindo criar, editar, cancelar e visualizar informações dos das consultas marcadas.
 
+## Protótipo
+
+O protótipo foi criado no figma e poderá ser conferido no link abaixo:
+
+```
+https://www.figma.com/design/Enrq4TPqIHDXMYdo83V4SL/Medical-Booking?m=auto&t=FYWE4sKeQOdFfSH6-1
+```
+
+
 ## Pré-requisitos
 
 Para que a aplicação funcione corretamente, é necessário que tenha o node instalado e instale a aplicação com o comando:
