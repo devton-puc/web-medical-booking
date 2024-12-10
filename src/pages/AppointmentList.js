@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PaginatedTable from "../components/PaginatedTable";
 import { useModal } from '../providers/ModalContext';
+import appointmentListJson from '../appointmentList.json';
 
 const AppointmentList = () => {
 
@@ -14,13 +15,7 @@ const AppointmentList = () => {
 
   ];
 
-  const [data, setData] = useState([
-    { patient: "João Silva", date: "25/11/2024", time: "09:00", specialty: "Cardiologia" },
-    { patient: "Maria Oliveira", date: "26/11/2024", time: "10:00", specialty: "Dermatologia" },
-    { patient: "Marcelo Gomes", date: "26/11/2024", time: "11:00", specialty: "Dermatologia" },
-    { patient: "João Almeida", date: "26/11/2024", time: "13:00", specialty: "Pediatria" },
-    { patient: "Carla Ferreira", date: "26/11/2024", time: "14:00", specialty: "Endrocnologia" },
-  ]);
+  const [data, setData] = useState(appointmentListJson.results);
 
   const cancelAppointment = (row) => {
 

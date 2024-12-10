@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PaginatedCard from "../components/PaginatedCard";
 import { useLocation } from 'react-router-dom';
 import { useModal } from '../providers/ModalContext';
+import appointmentListJsonToday from '../appointmentList.json';
 
 const Home = () => {
 
@@ -15,14 +16,7 @@ const Home = () => {
     }
   }, [location]); 
 
-  const [data, setData] = useState([
-    { patient: "João da Silva", specialty: "Cardiologia", time: "09:00" },
-    { patient: "Maria Oliveira", specialty: "Dermatologia", time: "10:30" },
-    { patient: "Carlos Pereira", specialty: "Oftalmologia", time: "11:00" },
-    { patient: "João da Silva", specialty: "Cardiologia", time: "09:00" },
-    { patient: "Maria Oliveira", specialty: "Dermatologia", time: "10:30" },
-    { patient: "Carlos Pereira", specialty: "Oftalmologia", time: "11:00" },
-  ]);
+  const [data, setData] = useState(appointmentListJsonToday.results);
   
   const columns = [
     { key: "patient", label: "Paciente" },  // Agora o campo 'patient' está dinâmico
