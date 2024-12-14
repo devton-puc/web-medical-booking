@@ -9,7 +9,7 @@ Este projeto é uma aplicação front-end desenvolvida com React. O objetivo é 
 O protótipo foi criado no figma e poderá ser conferido no link abaixo:
 
 ```
-https://www.figma.com/design/Enrq4TPqIHDXMYdo83V4SL/Medical-Booking?m=auto&t=FYWE4sKeQOdFfSH6-1
+https://www.figma.com/design/Enrq4TPqIHDXMYdo83V4SL/Medical-Booking?m=auto&t=GPgpb8ISBtRF4loR-6
 ```
 
 
